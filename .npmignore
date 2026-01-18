@@ -1,0 +1,15 @@
+# Folders
+_site/
+node_modules/
+src/
+ts-src/
+test/
+
+# files
+.gitignore
+eleventy.config.js
+package-lock.json
+pub.mjs
+tsconfig.json
+changelog.md
+*.cmd

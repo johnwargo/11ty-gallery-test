@@ -1,0 +1,56 @@
+/* Custom styling provided by Scott Good. */
+body header {
+  padding: 3rem 1rem 0;
+}
+
+header nav {
+  margin-bottom: 0;
+}
+
+body main,
+body footer {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+footer hr {
+  margin-bottom: 0;
+}
+
+body hr {
+  margin: 20px 0;
+}
+
+body main img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-links ol {
+  list-style: none;
+  width: 12rem;
+  margin-top: 1.6rem;
+}
+
+.page-links li {
+  border-bottom: 1pt solid #ddd;
+  padding-bottom: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.page-links li:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.page-links a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #999;
+}
+
+.page-links a:hover {
+  color: var(--color-link);
+  font-weight: bold;
+  text-decoration: underline;
+}
