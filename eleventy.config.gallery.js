@@ -42,7 +42,7 @@ async function galleryImageShortcode(src, alt) {
     returnVal += `data-pswp-width="${genMetadata.jpeg[1].width}" `;
     returnVal += `data-pswp-height="${genMetadata.jpeg[1].height}" `;
     returnVal += 'target="_blank">';
-    returnVal += `<img src="${genMetadata.jpeg[0].url}" alt="${alt}" />`;
+    returnVal += `<img src="${genMetadata.jpeg[0].url}" eleventy:ignore alt="${alt}" />`;
     returnVal += '</a>';
 
     console.log(returnVal);
