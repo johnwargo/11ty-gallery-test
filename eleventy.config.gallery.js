@@ -27,13 +27,10 @@ async function galleryImageShortcode(src, alt) {
         widths: [GALLERY_IMAGE_WIDTH, lightboxImageWidth],
         formats: ['jpeg'],
         // urlPath: "/img/",
-        outputDir: './_site/gen/'
+        outputDir: './_site/img/'
     }
-    console.dir(options);
-
+    
     const genMetadata = await Image(src, options);
-    console.log('\nGenerated Metadata');
-    console.dir(genMetadata);
 
     // Refactored this
     // return `<a href="${genMetadata.jpeg[1].url}" data-pswp-width="${genMetadata.jpeg[1].width}" data-pswp-height="${genMetadata.jpeg[1].height}" target="_blank"><img src="${genMetadata.jpeg[0].url}" alt="${alt}" /></a>`.replace(/(\r\n|\n|\r)/gm, "");
@@ -42,10 +39,8 @@ async function galleryImageShortcode(src, alt) {
     returnVal += `data-pswp-width="${genMetadata.jpeg[1].width}" `;
     returnVal += `data-pswp-height="${genMetadata.jpeg[1].height}" `;
     returnVal += 'target="_blank">';
-    returnVal += `<img src="${genMetadata.jpeg[0].url}" eleventy:ignore alt="${alt}" />`;
+    returnVal += `<img src="${genMetadata.jpeg[0].url}" alt="${alt}" eleventy:ignore />`;
     returnVal += '</a>';
-
-    console.log(returnVal);
     return returnVal.replace(/(\r\n|\n|\r)/gm, "");
 }
 
